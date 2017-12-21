@@ -8,8 +8,6 @@ const config = {
   destination: 'dist/'
 }
 
-const reload = browserSync.reload;
-
 gulp.task('css', () => {
   return gulp.src(config.source + 'sass/*.scss')
     .pipe(sass())
@@ -52,8 +50,13 @@ gulp.task('watch', () => {
   gulp.watch(config.source + 'scripts/*.js', ['js']);
   gulp.watch(config.source + '*.html', ['html']);
 
-  gulp.watch(config.source + 'scripts/*.js').on('change', reload);
-  gulp.watch(config.source + '*.html').on('change', reload);
+  gulp.watch(config.source + 'scripts/*.js').on('change', function() {
+    setTimeout(browserSync.reload, 500);
+  });
+  gulp.watch(config.source + '*.html').on('change', function() {
+    setTimeout(browserSync.reload, 500);
+  });
 })
 
-gulp.task('default', ['css', 'html', 'js', 'img', 'fonts']);
+gulp.task('default', ['css', 'html', 'js', 'img', 'fonts', 'watch']);
+gulp.task('server', ['css', 'html', 'js', 'img', 'fonts', 'watch', 'browserSync']);
