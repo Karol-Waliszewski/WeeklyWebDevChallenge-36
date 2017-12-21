@@ -1,0 +1,21 @@
+{
+  "name": "2",
+  "version": "1.0.0",
+  "description": "Weekly WebDev Challenge 36",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Karol Waliszewski",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.19.0",
+    "gulp": "^3.9.1",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-sass": "^3.1.0"
+  },
+  "dependencies": {
+    "flexboxgrid-sass": "^8.0.5",
+    "sass-flex-mixin": "^1.0.3"
+  }
+}

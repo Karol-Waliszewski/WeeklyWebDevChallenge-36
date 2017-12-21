@@ -1,0 +1,84 @@
+/// Block Element
+/// @access public
+/// @param {String} $element - Element's name
+@mixin element($element) {
+    @at-root #{&}__#{$element} {
+        @content;
+    }
+}
+
+/// Block Modifier
+/// @access public
+/// @param {String} $modifier - Modifier's name
+@mixin modifier($modifier) {
+    @at-root #{&}--#{$modifier} {
+        @content;
+    }
+}
+
+/// @alias element
+@mixin e($element) {
+    @include element($element) {
+        @content;
+    }
+}
+
+/// @alias modifier
+@mixin m($modifier) {
+    @include modifier($modifier) {
+        @content;
+    }
+}
+
+$mixins-breakpoints: ( "phone": 400px, "phone-wide": 480px, "phablet": 560px, "tablet-small": 640px, "tablet": 768px, "tablet-wide": 1024px, "desktop": 1248px, "desktop-wide": 1440px);
+@mixin responsive($width, $type: min) {
+    @if map_has_key($mixins-breakpoints, $width) {
+        $width: map_get($mixins-breakpoints, $width);
+        @if $type==max {
+            $width: $width - 1px;
+        }
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}
+
+@mixin centerFlex() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@mixin centerMargin() {
+    margin: {
+        left: auto;
+        right: auto;
+    }
+}
+
+@mixin centerBGImage($url) {
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@mixin font-size($size, $base: 16, $unit: 1rem) {
+    font-size: $size; // fallback for old browsers
+    font-size: ($size / $base) * $unit;
+}
+
+@function convertREM($size, $base: 16, $unit: 1rem) {
+    @return($size / $base) * $unit;
+}
+
+@function convertPixels($P, $projectD: 1920, $unit: 1%) {
+    @return($P/$projectD*100)*$unit;
+}
+
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); //IE8
+}

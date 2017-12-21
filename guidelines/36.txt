@@ -1,0 +1,6 @@
+﻿zadanie 36
+1. Start 23.07.2017
+2. Są widoki na desktop oraz na mobile.
+3. Sam html,css,javascript, bez frameworków
+4. Przydatne pojęcia: javascript product filter, https://codepen.io/jovanivezic/pen/JXWOex
+Powodzenia!
