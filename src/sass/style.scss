@@ -1,0 +1,12 @@
+@import "mixins";
+@import "flexboxgrid";
+@import url('https://fonts.googleapis.com/css?family=Muli:400,600,700');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Muli', sans-serif;
+}
+@import "nav";
+@import "header";

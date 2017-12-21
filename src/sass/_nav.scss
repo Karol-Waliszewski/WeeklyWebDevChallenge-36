@@ -1,0 +1,36 @@
+.navigation {
+  display: flex;
+  position: absolute;
+  top: convertPixels(40,768);
+  left: 50%;
+  align-items: center;
+  justify-content: space-between;
+  height: convertPixels(45,768);
+  transform: translateX(-50%);
+    @extend .container;
+}
+
+.navigation__links {
+  li {
+    display: inline-block;
+  }
+}
+
+.navigation__link {
+  margin: 0 convertREM(30);
+  //font-family: MaisonNeue;
+  color: #999;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: 300ms;
+
+  &.active {
+    color: #000000;
+  }
+
+  &:hover {
+    color: #000000;
+  }
+}
