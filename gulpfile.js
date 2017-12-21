@@ -38,7 +38,7 @@ gulp.task('img', () => {
     .pipe(gulp.dest(config.destination + 'img'));
 });
 
-gulp.tast('browserSync', () => {
+gulp.task('browserSync', () => {
   let options = {
     server: {
       baseDir: config.destination
