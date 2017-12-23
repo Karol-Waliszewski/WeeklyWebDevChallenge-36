@@ -1,6 +1,7 @@
 @import "mixins";
 @import "flexboxgrid";
 @import url('https://fonts.googleapis.com/css?family=Muli:400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text:300i,400,400i');
 
 * {
   margin: 0;
@@ -10,3 +11,13 @@
 }
 @import "nav";
 @import "header";
+@import "shop";
+@import "sidebar";
+@import "main";
+@import "discount";
+@import "footer";
+
+.italic {
+  font-style: italic;
+  font-family: inherit;
+}

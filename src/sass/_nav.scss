@@ -1,5 +1,6 @@
 .navigation {
   display: flex;
+  z-index: 10;
   position: absolute;
   top: convertPixels(40,768);
   left: 50%;
@@ -7,7 +8,13 @@
   justify-content: space-between;
   height: convertPixels(45,768);
   transform: translateX(-50%);
-    @extend .container;
+  @extend .container;
+}
+
+.navigation--footer {
+  .navigation__link {
+    color: #000;
+  }
 }
 
 .navigation__links {
@@ -17,13 +24,15 @@
 }
 
 .navigation__link {
-  margin: 0 convertREM(30);
+  margin: 0 convertREM(20);
   //font-family: MaisonNeue;
   color: #999;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: 2px;
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
   transition: 300ms;
 
   &.active {

@@ -1,0 +1,11 @@
+.shop {
+  @extend .container;
+  margin-top: convertPixels(82,768,1vh);
+  margin-bottom: convertPixels(60,768,1vh);
+  @extend .row;
+}
+
+.pagination {
+  @extend .col-md-3;
+  margin-left: auto;
+}
