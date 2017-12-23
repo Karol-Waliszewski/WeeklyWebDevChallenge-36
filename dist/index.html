@@ -47,185 +47,209 @@
   </header>
 
   <main class="shop">
-      <aside class="sidebar">
-        <div class="sidebar__categories">
-          <h4 class="sidebar__heading">Categories</h4>
+    <aside class="sidebar">
+      <div class="sidebar__categories">
+        <h4 class="sidebar__heading">Categories</h4>
+        <ul class="sidebar__list">
+          <li class="sidebar__item">
+            All products
+            <span class="sidebar__badge">57</span>
+          </li>
+          <li class="sidebar__item">
+            Living
+            <span class="sidebar__badge">14</span>
+          </li>
+          <li class="sidebar__item">
+            Dining
+            <span class="sidebar__badge">03</span>
+          </li>
+          <li class="sidebar__item">
+            Furniture
+            <span class="sidebar__badge">07</span>
+          </li>
+          <li class="sidebar__item">
+            Lighting
+            <span class="sidebar__badge">12</span>
+          </li>
+          <li class="sidebar__item">
+            Technics
+            <span class="sidebar__badge">10</span>
+          </li>
+          <li class="sidebar__item">
+            Accessories
+            <span class="sidebar__badge">21</span>
+          </li>
+        </ul>
+      </div>
+
+      <hr class="sidebar__line">
+
+      <div class="filter">
+        <h4 class="sidebar__heading">Filter by</h4>
+
+        <div>
+          <h5 class="sidebar__subHeading">Price</h5>
+          <form action="">
+            <input type="range" name="" value="">
+            <!-- TODO create CUSTOM RANGE SLIDER -->
+            <input type="number" class="filter__range">
+            <input type="number" class="filter__range">
+            <input type="submit" class="btn--filter">
+          </form>
+        </div>
+
+        <div>
+          <h5 class="sidebar__subHeading">Color</h5>
+          <!-- TODO BUTTON -->
+        </div>
+
+        <div>
+          <h5 class="sidebar__subHeading">Size</h5>
           <ul class="sidebar__list">
             <li class="sidebar__item">
-              All products
-              <span class="sidebar__badge">57</span>
-            </li>
-            <li class="sidebar__item">
-              Living
-              <span class="sidebar__badge">14</span>
-            </li>
-            <li class="sidebar__item">
-              Dining
-              <span class="sidebar__badge">03</span>
-            </li>
-            <li class="sidebar__item">
-              Furniture
+              Small
               <span class="sidebar__badge">07</span>
             </li>
             <li class="sidebar__item">
-              Lighting
+              Medium
               <span class="sidebar__badge">12</span>
             </li>
             <li class="sidebar__item">
-              Technics
+              Large
+              <span class="sidebar__badge">18</span>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="sidebar__subHeading">Brands</h5>
+          <ul class="sidebar__list">
+            <li class="sidebar__item">
+              Banshu Hamono
+              <span class="sidebar__badge">02</span>
+            </li>
+            <li class="sidebar__item">
+              Bower
+              <span class="sidebar__badge">07</span>
+            </li>
+            <li class="sidebar__item">
+              Braun
               <span class="sidebar__badge">10</span>
             </li>
             <li class="sidebar__item">
-              Accessories
-              <span class="sidebar__badge">21</span>
+              Elevenplus
+              <span class="sidebar__badge">09</span>
+            </li>
+            <li class="sidebar__item">
+              Field
+              <span class="sidebar__badge">01</span>
+            </li>
+            <li class="sidebar__item">
+              Henry Wilson
+              <span class="sidebar__badge">11</span>
+            </li>
+            <li class="sidebar__item">
+              Menu
+              <span class="sidebar__badge">17</span>
             </li>
           </ul>
         </div>
+      </div>
 
-        <hr class="sidebar__line">
+      <hr class="sidebar__line">
 
-        <div class="filter">
-          <h4 class="sidebar__heading">Filter by</h4>
+      <div class="tags">
+        <h5 class="sidebar__heading">Popular Tags</h5>
+        <ul class="tags__list">
+          <li class="tags__item"><a href="#" class="tags__link">Simple</a></li>
+          <li class="tags__item"><a href="#" class="tags__link">Minimalism</a></li>
+          <li class="tags__item"><a href="#" class="tags__link">Furniture</a></li>
+          <li class="tags__item"><a href="#" class="tags__link">White</a></li>
+          <li class="tags__item"><a href="#" class="tags__link">Black</a></li>
+          <li class="tags__item"><a href="#" class="tags__link">Accessories</a></li>
+        </ul>
+      </div>
+    </aside>
 
-          <div>
-            <h5 class="sidebar__subHeading">Price</h5>
-            <form action="">
-              <input type="range" name="" value="">
-              <!-- TODO create CUSTOM RANGE SLIDER -->
-              <input type="number" class="filter__range">
-              <input type="number" class="filter__range">
-              <input type="submit" class="btn--filter">
-            </form>
-          </div>
-
-          <div>
-            <h5 class="sidebar__subHeading">Color</h5>
-            <!-- TODO BUTTON -->
-          </div>
-
-          <div>
-            <h5 class="sidebar__subHeading">Size</h5>
-            <ul class="sidebar__list">
-              <li class="sidebar__item">
-                Small
-                <span class="sidebar__badge">07</span>
-              </li>
-              <li class="sidebar__item">
-                Medium
-                <span class="sidebar__badge">12</span>
-              </li>
-              <li class="sidebar__item">
-                Large
-                <span class="sidebar__badge">18</span>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h5 class="sidebar__subHeading">Brands</h5>
-            <ul class="sidebar__list">
-              <li class="sidebar__item">
-                Banshu Hamono
-                <span class="sidebar__badge">02</span>
-              </li>
-              <li class="sidebar__item">
-                Bower
-                <span class="sidebar__badge">07</span>
-              </li>
-              <li class="sidebar__item">
-                Braun
-                <span class="sidebar__badge">10</span>
-              </li>
-              <li class="sidebar__item">
-                Elevenplus
-                <span class="sidebar__badge">09</span>
-              </li>
-              <li class="sidebar__item">
-                Field
-                <span class="sidebar__badge">01</span>
-              </li>
-              <li class="sidebar__item">
-                Henry Wilson
-                <span class="sidebar__badge">11</span>
-              </li>
-              <li class="sidebar__item">
-                Menu
-                <span class="sidebar__badge">17</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <hr class="sidebar__line">
-
-        <div class="tags">
-          <h5 class="sidebar__heading">Popular Tags</h5>
-          <ul class="tags__list">
-            <li class="tags__item"><a href="#" class="tags__link">Simple</a></li>
-            <li class="tags__item"><a href="#" class="tags__link">Minimalism</a></li>
-            <li class="tags__item"><a href="#" class="tags__link">Furniture</a></li>
-            <li class="tags__item"><a href="#" class="tags__link">White</a></li>
-            <li class="tags__item"><a href="#" class="tags__link">Black</a></li>
-            <li class="tags__item"><a href="#" class="tags__link">Accessories</a></li>
-          </ul>
-        </div>
-      </aside>
-
-      <div class="main">
+    <div class="main">
+      <header class="main__header">
         <div class="sort">
           <h3 class="sort__heading">Sort by: A-Z</h3>
           <ul class="sort__options"></ul>
         </div>
-        <p class="main__results--info">Showing <span id="resultsRange">1 - 12</span> of <span id="resultsAmount">24</span> results</p>
-        <div class="products">
+        <p class="main__resultsInfo">
+          Showing <span id="resultsRange">1 - 12</span> of
+          <span id="resultsAmount">24</span> results
+        </p>
+      </header>
+      <div class="products">
+        <div class="products__column">
           <div class="product">
-            <span class="product__new">New</span>
-            <span class="product__favourite">	&#10084;</span>
-            <!-- TODO Add outlined heart -->
-            <img src="" alt="" class="product__display">
-            <p class="product__name">Bottle Humidifier</p>
-            <p class="product__price">$69.00</p>
-            <span class="product__cart"><span>CART ICON HERE </span>Add to Cart</span>
+            <div class="product__properties">
+              <span class="product__new">New</span>
+              <span class="product__favourite">	&#10084;</span>
+              <!-- TODO Add outlined heart -->
+            </div>
+            <img src="img/product-1.jpg" alt="" class="product__display">
+            <div class="product__info">
+              <p class="product__name">Bottle Humidifier</p>
+              <p class="product__price">$69.00</p>
+              <button class="product__cart">
+                <span> <3 </span>Add to Cart
+              </button>
+            </div>
           </div>
           <div class="product">
-            <span class="product__new">New</span>
-            <span class="product__favourite">	&#10084;</span>
-            <!-- TODO Add outlined heart -->
+            <div class="product__properties">
+              <span class="product__new">New</span>
+              <span class="product__favourite">	&#10084;</span>
+              <!-- TODO Add outlined heart -->
+            </div>
             <img src="" alt="" class="product__display">
             <p class="product__name">Flower Scissors</p>
             <p class="product__price">$159.00</p>
             <span class="product__cart"><span>CART ICON HERE </span>Add to Cart</span>
           </div>
           <div class="product">
-            <span class="product__new">New</span>
-            <span class="product__favourite">	&#10084;</span>
-            <!-- TODO Add outlined heart -->
+            <div class="product__properties">
+              <span class="product__new">New</span>
+              <span class="product__favourite">	&#10084;</span>
+              <!-- TODO Add outlined heart -->
+            </div>
             <img src="" alt="" class="product__display">
             <p class="product__name">Grey Watch</p>
             <p class="product__price">$215.00</p>
             <span class="product__cart"><span>CART ICON HERE </span>Add to Cart</span>
           </div>
+        </div>
+        <div class="products__column">
           <div class="product">
-            <span class="product__new">New</span>
-            <span class="product__favourite">	&#10084;</span>
-            <!-- TODO Add outlined heart -->
+            <div class="product__properties">
+              <span class="product__new">New</span>
+              <span class="product__favourite">	&#10084;</span>
+              <!-- TODO Add outlined heart -->
+            </div>
             <img src="" alt="" class="product__display">
             <p class="product__name">Sweeper and Funnel</p>
             <p class="product__price">$59.00</p>
             <span class="product__cart"><span>CART ICON HERE </span>Add to Cart</span>
           </div>
           <div class="product">
-            <span class="product__new">New</span>
-            <span class="product__favourite">	&#10084;</span>
-            <!-- TODO Add outlined heart -->
+            <div class="product__properties">
+              <span class="product__new">New</span>
+              <span class="product__favourite">	&#10084;</span>
+              <!-- TODO Add outlined heart -->
+            </div>
             <img src="" alt="" class="product__display">
             <p class="product__name">White Bulb</p>
             <p class="product__price">$349.00</p>
             <span class="product__cart"><span>CART ICON HERE </span>Add to Cart</span>
           </div>
           <div class="product">
-            <span class="product__new">New</span>
-            <span class="product__favourite">	&#10084;</span>
-            <!-- TODO Add outlined heart -->
+            <div class="product__properties">
+              <span class="product__new">New</span>
+              <span class="product__favourite">	&#10084;</span>
+              <!-- TODO Add outlined heart -->
+            </div>
             <img src="" alt="" class="product__display">
             <p class="product__name">Teapot</p>
             <p class="product__price">$55.00</p>
@@ -233,17 +257,18 @@
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="pagination">
-        <ol class="pagination__links">
-          <li><a href="#" id="pagination-1" class="pagination__link">01</a></li>
-          <li><a href="#" id="pagination-2" class="pagination__link">02</a></li>
-          <li><a href="#" id="pagination-3" class="pagination__link">03</a></li>
-          <li><a href="#" id="pagination-4" class="pagination__link">04</a></li>
-          <li><a href="#" id="pagination-5" class="pagination__link">05</a></li>
-        </ol>
-        <a href="#">&#8594;</a>
-      </div>
+    <div class="pagination">
+      <ol class="pagination__links">
+        <li><a href="#" id="pagination-1" class="pagination__link">01</a></li>
+        <li><a href="#" id="pagination-2" class="pagination__link">02</a></li>
+        <li><a href="#" id="pagination-3" class="pagination__link">03</a></li>
+        <li><a href="#" id="pagination-4" class="pagination__link">04</a></li>
+        <li><a href="#" id="pagination-5" class="pagination__link">05</a></li>
+      </ol>
+      <a href="#">&#8594;</a>
+    </div>
 
   </main>
 

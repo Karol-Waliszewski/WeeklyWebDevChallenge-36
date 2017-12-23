@@ -1,3 +1,17 @@
 .main {
   @extend .col-md-8;
 }
+
+.main__header {
+  @extend .row;
+  @extend .between-xs;
+  margin-bottom: convertPixels(36,768,1vh);
+}
+
+.main__resultsInfo {
+  @extend .col-md-5;
+  text-align: right; //font-family: MaisonNeue;
+  color: #777;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
