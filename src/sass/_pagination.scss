@@ -1,0 +1,25 @@
+.pagination {}
+
+.pagination__links {
+  li {
+    display: inline-block;
+  }
+}
+
+.pagination__link {
+  //font-family: MaisonNeue;
+  color: #666;
+  font-size: convertREM(24);
+  text-align: center;
+  text-decoration: none;
+  transition: 250ms;
+  font-weight: 600;
+
+  &.active {
+    color: #000000;
+  }
+
+  &:hover {
+    color: #000000;
+  }
+}

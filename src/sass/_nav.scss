@@ -18,13 +18,13 @@
 }
 
 .navigation__links {
-  li {
-    display: inline-block;
-  }
+  display: flex;
+  align-items: center;
+list-style-type: none;
 }
 
 .navigation__link {
-  margin: 0 convertREM(20);
+  margin: 0 convertREM(22);
   //font-family: MaisonNeue;
   color: #999;
   font-size: 1rem;

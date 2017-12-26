@@ -1,0 +1,33 @@
+.tags {}
+
+.tags__list {
+  list-style-type: none;
+  max-width: 274px;
+}
+
+.tags__item {
+  display: inline-block;
+  margin-bottom: convertREM(14);
+  &:last-child {
+    .tags__link {
+      &::after {
+        content: none;
+      }
+    }
+  }
+}
+
+.tags__link {
+  color: #444;
+  font-size: convertREM(18);
+
+  font-weight: 600;
+  text-decoration: none;
+
+  &::after {
+    content: ",";
+  }
+  &:hover {
+    color: #0000000;
+  }
+}

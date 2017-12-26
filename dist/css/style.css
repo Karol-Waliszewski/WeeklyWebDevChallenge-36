@@ -1991,11 +1991,13 @@
 .navigation--footer .navigation__link {
   color: #000; }
 
-.navigation__links li {
-  display: inline-block; }
+.navigation__links {
+  display: flex;
+  align-items: center;
+  list-style-type: none; }
 
 .navigation__link {
-  margin: 0 1.25rem;
+  margin: 0 1.375rem;
   color: #999;
   font-size: 1rem;
   font-weight: 700;
@@ -2019,7 +2021,8 @@
 
 .slider__wrapper {
   position: relative;
-  height: 100%; }
+  height: 100%;
+  overflow: hidden; }
 
 .slider__heading {
   margin-bottom: 1.125rem;
@@ -2080,6 +2083,75 @@
 .pagination {
   margin-left: auto; }
 
+.sidebar__heading {
+  font-size: 1.5rem;
+  color: #000;
+  margin-bottom: 2.1875rem;
+  font-weight: 600; }
+
+.sidebar__subHeading {
+  font-size: 1.4375rem;
+  color: #000;
+  font-weight: 600;
+  margin-top: 5.20833vh; }
+
+.sidebar__line {
+  background-color: rgba(0, 0, 0, 0.3);
+  max-width: 270px;
+  height: 1px;
+  margin-top: 7.8125vh;
+  margin-bottom: 7.8125vh; }
+
+.sidebar__badge {
+  position: absolute;
+  font-size: 0.875rem;
+  color: #999;
+  letter-spacing: 2px;
+  font-weight: 300;
+  top: -6px;
+  transform: translateX(3px); }
+
+.sidebar__list {
+  list-style-type: none; }
+
+.sidebar__item {
+  margin: 2.99479vh 0;
+  position: relative;
+  color: #333;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer; }
+  .sidebar__item:hover {
+    color: #000; }
+
+.sidebar__colorPicker {
+  max-width: 270px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2.47396vh;
+  margin-bottom: 1.17188vh; }
+
+.colorPick {
+  border-radius: 50%;
+  border-width: 1px;
+  border-color: #f5f5f5;
+  border-style: solid;
+  width: 4.29688vh;
+  height: 4.29688vh;
+  cursor: pointer;
+  color: #fff; }
+  .colorPick.active::after {
+    content: "\2714";
+    font-size: 20px;
+    font-weight: 400; }
+  .colorPick:focus {
+    outline: none; }
+    .colorPick:focus::after {
+      content: "\2714";
+      font-size: 20px;
+      font-weight: 400; }
+
 .main__header {
   margin-bottom: 4.6875vh; }
 
@@ -2095,8 +2167,17 @@
   max-height: 500px;
   margin-bottom: 2.73438vh;
   padding: 1.875rem 1.9375rem;
-  background: #f5f5f5; }
+  background: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
   .product:hover .product__favourite {
+    opacity: 100; }
+  .product:hover .product__cart {
+    opacity: 100; }
+  .product:hover .product__display, .product:hover .product__display--hover {
+    opacity: 0; }
+  .product:hover .product__display--hover {
     opacity: 100; }
 
 .product__properties {
@@ -2114,8 +2195,9 @@
   font-size: 1.25rem;
   cursor: pointer;
   opacity: 0;
-  text-align: right;
-  transition: 200ms; }
+  text-align: right; }
+  .product__favourite.favourite {
+    opacity: 100; }
 
 .product__info {
   position: relative;
@@ -2125,29 +2207,73 @@
 
 .product__cart {
   color: #222;
-  font-size: 1.375rem;
+  font-size: 1.25rem;
   font-weight: 600;
   border: none;
   background: none;
   cursor: pointer;
-  text-align: right; }
+  text-align: right;
+  opacity: 0; }
 
 .product__name {
   color: #222;
   font-size: 1.25rem;
-  font-weight: 600; }
+  font-weight: 600;
+  margin-bottom: 1.125rem; }
 
 .product__price {
   color: #555;
-  font-size: 1.375rem;
+  font-size: 1.3125rem;
   font-weight: 600; }
 
-.product__display {
+.product__display, .product__display--hover {
   position: absolute;
   top: 50%;
   left: 50%;
   width: 100%;
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%);
+  opacity: 100; }
+
+.product__display--hover {
+  opacity: 0; }
+
+.pagination__links li {
+  display: inline-block; }
+
+.pagination__link {
+  color: #666;
+  font-size: 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  transition: 250ms;
+  font-weight: 600; }
+  .pagination__link.active {
+    color: #000000; }
+  .pagination__link:hover {
+    color: #000000; }
+
+.tags__list {
+  list-style-type: none;
+  max-width: 274px; }
+
+.tags__item {
+  display: inline-block;
+  margin-bottom: 0.875rem; }
+  .tags__item:last-child .tags__link::after {
+    content: none; }
+
+.tags__link {
+  color: #444;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-decoration: none; }
+  .tags__link::after {
+    content: ","; }
+  .tags__link:hover {
+    color: #000; }
+
+.sort__heading {
+  font-size: 1.5rem; }
 
 .discount {
   height: 250px;
@@ -2218,3 +2344,7 @@
 .italic {
   font-style: italic;
   font-family: inherit; }
+
+.icon {
+  height: 22px;
+  margin: 0 3px; }

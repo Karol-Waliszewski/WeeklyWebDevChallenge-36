@@ -11,7 +11,7 @@
 <body>
   <nav class="navigation">
     <h1 class="navigation__logo">
-      <img src="" alt="Mainson's logo">
+      <img src="img/logo.png" alt="Mainson's logo">
     </h1>
     <ul class="navigation__links">
       <li><a href="#" class="navigation__link">Home</a></li>
@@ -21,7 +21,7 @@
       <li><a href="#" class="navigation__link">Pages</a></li>
       <li>
         <a href="#" class="navigation__link">
-          <img src="" alt="Shopping bag">
+          <img src="img/cart.png" alt="Shopping cart">
         </a>
       </li>
     </ul>
@@ -98,9 +98,13 @@
           </form>
         </div>
 
-        <div>
-          <h5 class="sidebar__subHeading">Color</h5>
-          <!-- TODO BUTTON -->
+        <h5 class="sidebar__subHeading">Color</h5>
+        <div class="sidebar__colorPicker">
+          <button class="colorPick" style="background: #c7c7c7"></button>
+          <button class="colorPick active" style="background: #fff; border-width: 2px; color: #222;"></button>
+          <button class="colorPick" style="background: #ff8b8b"></button>
+          <button class="colorPick" style="background: #b2e6fe"></button>
+          <button class="colorPick" style="background: #beffc9"></button>
         </div>
 
         <div>
@@ -190,70 +194,99 @@
               <!-- TODO Add outlined heart -->
             </div>
             <img src="img/product-1.jpg" alt="" class="product__display">
+            <img src="img/product-1-h.jpg" alt="" class="product__display--hover">
             <div class="product__info">
               <p class="product__name">Bottle Humidifier</p>
               <p class="product__price">$69.00</p>
               <button class="product__cart">
-                <span> <3 </span>Add to Cart
+                <img class="icon" src="img/cart.png" alt="Shopping cart"> Add to Cart
               </button>
             </div>
-          </div>
-          <div class="product">
-            <div class="product__properties">
-              <span class="product__new">New</span>
-              <span class="product__favourite">	&#10084;</span>
-              <!-- TODO Add outlined heart -->
-            </div>
-            <img src="" alt="" class="product__display">
-            <p class="product__name">Flower Scissors</p>
-            <p class="product__price">$159.00</p>
-            <span class="product__cart"><span>CART ICON HERE </span>Add to Cart</span>
-          </div>
-          <div class="product">
-            <div class="product__properties">
-              <span class="product__new">New</span>
-              <span class="product__favourite">	&#10084;</span>
-              <!-- TODO Add outlined heart -->
-            </div>
-            <img src="" alt="" class="product__display">
-            <p class="product__name">Grey Watch</p>
-            <p class="product__price">$215.00</p>
-            <span class="product__cart"><span>CART ICON HERE </span>Add to Cart</span>
           </div>
         </div>
         <div class="products__column">
           <div class="product">
             <div class="product__properties">
-              <span class="product__new">New</span>
-              <span class="product__favourite">	&#10084;</span>
+              <span class="product__favourite favourite">	&#10084;</span>
               <!-- TODO Add outlined heart -->
             </div>
-            <img src="" alt="" class="product__display">
-            <p class="product__name">Sweeper and Funnel</p>
-            <p class="product__price">$59.00</p>
-            <span class="product__cart"><span>CART ICON HERE </span>Add to Cart</span>
+            <img src="img/product-2.jpg" alt="" class="product__display">
+            <img src="img/product-2-h.jpg" alt="" class="product__display--hover">
+            <div class="product__info">
+              <p class="product__name">Flower Scissors</p>
+              <p class="product__price">$159.00</p>
+              <button class="product__cart">
+                <img class="icon" src="img/cart.png" alt="Shopping cart"> Add to Cart
+              </button>
+            </div>
           </div>
+        </div>
+        <div class="products__column">
           <div class="product">
             <div class="product__properties">
-              <span class="product__new">New</span>
               <span class="product__favourite">	&#10084;</span>
               <!-- TODO Add outlined heart -->
             </div>
-            <img src="" alt="" class="product__display">
-            <p class="product__name">White Bulb</p>
-            <p class="product__price">$349.00</p>
-            <span class="product__cart"><span>CART ICON HERE </span>Add to Cart</span>
+            <img src="img/product-3.jpg" alt="" class="product__display">
+            <img src="img/product-3-h.jpg" alt="" class="product__display--hover">
+            <div class="product__info">
+              <p class="product__name">Grey Watch</p>
+              <p class="product__price">$215.00</p>
+              <button class="product__cart">
+                <img class="icon" src="img/cart.png" alt="Shopping cart"> Add to Cart
+              </button>
+            </div>
           </div>
+        </div>
+        <div class="products__column">
           <div class="product">
             <div class="product__properties">
-              <span class="product__new">New</span>
               <span class="product__favourite">	&#10084;</span>
               <!-- TODO Add outlined heart -->
             </div>
-            <img src="" alt="" class="product__display">
-            <p class="product__name">Teapot</p>
-            <p class="product__price">$55.00</p>
-            <span class="product__cart"><span>CART ICON HERE </span>Add to Cart</span>
+            <img src="img/product-4.jpg" alt="" class="product__display">
+            <img src="img/product-4-h.jpg" alt="" class="product__display--hover">
+            <div class="product__info">
+              <p class="product__name">Sweeper and Funnel</p>
+              <p class="product__price">$59.00</p>
+              <button class="product__cart">
+                <img class="icon" src="img/cart.png" alt="Shopping cart"> Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="products__column">
+          <div class="product">
+            <div class="product__properties">
+              <span class="product__favourite">	&#10084;</span>
+              <!-- TODO Add outlined heart -->
+            </div>
+            <img src="img/product-5.jpg" alt="" class="product__display">
+            <img src="img/product-5-h.jpg" alt="" class="product__display--hover">
+            <div class="product__info">
+              <p class="product__name">White Bulb</p>
+              <p class="product__price">$349.00</p>
+              <button class="product__cart">
+                <img class="icon" src="img/cart.png" alt="Shopping cart"> Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="products__column">
+          <div class="product">
+            <div class="product__properties">
+              <span class="product__favourite">	&#10084;</span>
+              <!-- TODO Add outlined heart -->
+            </div>
+            <img src="img/product-6.jpg" alt="" class="product__display">
+            <img src="img/product-6-h.jpg" alt="" class="product__display--hover">
+            <div class="product__info">
+              <p class="product__name">Teapot</p>
+              <p class="product__price">$55.00</p>
+              <button class="product__cart">
+                <img class="icon" src="img/cart.png" alt="Shopping cart"> Add to Cart
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -266,8 +299,9 @@
         <li><a href="#" id="pagination-3" class="pagination__link">03</a></li>
         <li><a href="#" id="pagination-4" class="pagination__link">04</a></li>
         <li><a href="#" id="pagination-5" class="pagination__link">05</a></li>
+        <li><a href="#" class="pagination__link">&#8594;</a></li>
       </ol>
-      <a href="#">&#8594;</a>
+
     </div>
 
   </main>
