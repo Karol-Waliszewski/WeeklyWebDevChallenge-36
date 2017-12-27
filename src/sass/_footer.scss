@@ -13,3 +13,14 @@
   font-weight: 600;
   letter-spacing: 0.5px;
 }
+
+@include responsive('tablet',max){
+  .footer {
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    height: auto;
+  }
+  .footer__rights {
+  padding: convertPixels(26,700,1vh) 0;
+  }
+}

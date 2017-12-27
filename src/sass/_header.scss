@@ -40,8 +40,9 @@
 
 .slider__wrapper--image {
   @extend .col-md-8;
+  @extend .col-xs-6;
   position: relative;
-  overflow: hidden;
+  //overflow: hidden;
   transform: scale(1.2);
   transform-origin: top;
 }
@@ -81,7 +82,33 @@
 
 .slider__wrapper--text {
   @extend .col-md-4;
+  @extend .col-xs-6;
   @include centerFlex();
   z-index: 5;
   align-items: start;
+}
+@include responsive('tablet-wide',max) {
+  .header {
+    height: convertPixels(330,700,1vh);
+  }
+
+  .slider__wrapper--image {
+    transform: scale(.9);
+  }
+
+  .slider__image {
+    top: 50%;
+    left: 90%;
+    transform: translate(-50%,-50%);
+    height: 100%;
+  }
+
+}
+@include responsive('tablet',max) {  .slider__heading {
+    font-size: 1.8rem;
+  }
+
+  .slider__subheading {
+    font-size: 1.2rem;
+  }
 }
