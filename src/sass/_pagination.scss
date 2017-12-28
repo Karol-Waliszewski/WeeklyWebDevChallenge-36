@@ -1,4 +1,7 @@
-.pagination {}
+.pagination {
+  @extend .col-md-3;
+  margin-left: auto;
+}
 
 .pagination__links {
   li {
@@ -21,5 +24,15 @@
 
   &:hover {
     color: #000000;
+  }
+}
+@include responsive('tablet',max) {
+  .pagination {
+    margin-top: 1rem;
+    margin-right: 1rem;
+  }
+
+  .pagination__link {
+    font-size: convertREM(20);
   }
 }

@@ -58,8 +58,7 @@
   font-size: convertREM(20);
   cursor: pointer;
   opacity: 0; //display: none;
-  text-align: right;
-//  transition: 200ms;
+  text-align: right; //  transition: 200ms;
 
   &.favourite {
     //TODO FILL HEART
@@ -71,8 +70,6 @@
   @extend .row;
   position: relative;
   z-index: 2;
-  margin-top: auto;
-  vertical-align: bottom;
 }
 
 .product__cart {
@@ -84,8 +81,7 @@
   background: none;
   cursor: pointer;
   text-align: right;
-  opacity: 0;
-//  transition: 100ms;
+  opacity: 0; //  transition: 100ms;
 }
 
 .product__name {
@@ -97,7 +93,8 @@
 }
 
 .product__price {
-  @extend .col-xs-4;
+  @extend .col-sm-4;
+  @extend .col-xs-12;
   color: #555;
   font-size: convertREM(21);
   font-weight: 600;
@@ -115,4 +112,56 @@
 .product__display--hover {
   @extend .product__display;
   opacity: 0;
+}
+@include responsive('tablet-wide',max) {
+  .product {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5px;
+    padding-bottom: 0;
+    overflow: hidden;
+    padding: {
+      left: 0;
+      right: 0;
+    }
+    min-height: 50vw;
+    height: auto;
+    background: none;
+  }
+
+  .product__display {
+    width: 50vw;
+    height: 50vw;
+    top: 0;
+    transform: translateX(-50%);
+    object-fit: cover;
+  }
+
+  .product__properties {
+    margin: 0 0.5rem !important;
+  }
+
+  .product__info {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 49vw;
+  }
+
+  .product__cart {
+    display: none;
+  }
+
+  .product__name {
+    font-size: convertREM(18);
+    margin-bottom: 0.5rem;
+  }
+
+  .product__price {
+    font-size: convertREM(19);
+  }
+}
+@include responsive('tablet',max) {
+  .product__info {
+    margin-top: 45vw;
+  }
 }

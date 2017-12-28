@@ -90,3 +90,10 @@
     }
   }
 }
+
+@include responsive('tablet-wide',max){
+  .sidebar{
+    max-height: 30px;
+    overflow: hidden;
+  }
+}
