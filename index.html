@@ -10,9 +10,13 @@
 
 <body>
   <nav class="navigation">
+    <button class="navigation__hamburger">&#9776;</button>
+
     <h1 class="navigation__logo">
-      <img src="img/Logo.png" alt="Mainson's logo">
+      <img src="img/logo.png" alt="Mainson's logo">
+      <span>Maison</span>
     </h1>
+
     <ul class="navigation__links">
       <li><a href="#" class="navigation__link">Home</a></li>
       <li><a href="#" class="navigation__link active">Shop</a></li>
@@ -21,10 +25,14 @@
       <li><a href="#" class="navigation__link">Pages</a></li>
       <li>
         <a href="#" class="navigation__link">
-          <img src="img/Cart.png" alt="Shopping cart">
+          <img src="img/cart.png" alt="Shopping cart">
         </a>
       </li>
     </ul>
+
+    <button class="navigation__cart">
+      <img src="img/cart.png" alt="Shopping cart">
+    </button>
   </nav>
 
   <header class="header">
@@ -48,7 +56,7 @@
 
   <main class="shop">
     <aside class="sidebar">
-      <div class="sidebar__categories">
+      <div id="categories" class="sidebar__categories">
         <h4 class="sidebar__heading">Categories</h4>
         <ul class="sidebar__list">
           <li class="sidebar__item">
@@ -84,9 +92,8 @@
 
       <hr class="sidebar__line">
 
-      <div class="filter">
+      <div id="filter" class="filter">
         <h4 class="sidebar__heading">Filter by</h4>
-
         <div>
           <h5 class="sidebar__subHeading">Price</h5>
           <form action="">
@@ -199,7 +206,7 @@
               <p class="product__name">Bottle Humidifier</p>
               <p class="product__price">$69.00</p>
               <button class="product__cart">
-                <img class="icon" src="img/Cart.png" alt="Shopping cart"> Add to Cart
+                <img class="icon" src="img/cart.png" alt="Shopping cart"> Add to Cart
               </button>
             </div>
           </div>
@@ -216,7 +223,7 @@
               <p class="product__name">Flower Scissors</p>
               <p class="product__price">$159.00</p>
               <button class="product__cart">
-                <img class="icon" src="img/Cart.png" alt="Shopping cart"> Add to Cart
+                <img class="icon" src="img/cart.png" alt="Shopping cart"> Add to Cart
               </button>
             </div>
           </div>
@@ -233,7 +240,7 @@
               <p class="product__name">Grey Watch</p>
               <p class="product__price">$215.00</p>
               <button class="product__cart">
-                <img class="icon" src="img/Cart.png" alt="Shopping cart"> Add to Cart
+                <img class="icon" src="img/cart.png" alt="Shopping cart"> Add to Cart
               </button>
             </div>
           </div>
@@ -250,7 +257,7 @@
               <p class="product__name">Sweeper and Funnel</p>
               <p class="product__price">$59.00</p>
               <button class="product__cart">
-                <img class="icon" src="img/Cart.png" alt="Shopping cart"> Add to Cart
+                <img class="icon" src="img/cart.png" alt="Shopping cart"> Add to Cart
               </button>
             </div>
           </div>
@@ -267,7 +274,7 @@
               <p class="product__name">White Bulb</p>
               <p class="product__price">$349.00</p>
               <button class="product__cart">
-                <img class="icon" src="img/Cart.png" alt="Shopping cart"> Add to Cart
+                <img class="icon" src="img/cart.png" alt="Shopping cart"> Add to Cart
               </button>
             </div>
           </div>
@@ -284,7 +291,7 @@
               <p class="product__name">Teapot</p>
               <p class="product__price">$55.00</p>
               <button class="product__cart">
-                <img class="icon" src="img/Cart.png" alt="Shopping cart"> Add to Cart
+                <img class="icon" src="img/cart.png" alt="Shopping cart"> Add to Cart
               </button>
             </div>
           </div>
