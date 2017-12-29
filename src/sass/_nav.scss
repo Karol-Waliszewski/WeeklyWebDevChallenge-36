@@ -57,10 +57,26 @@
 @include responsive('tablet-wide',max) {
   .navigation {
     position: static;
-    height: convertPixels(100,700,1vh);
+    max-height: convertPixels(100,700,1vh);
+    height: auto;
     background-color: #fff;
     transform: none;
     justify-content: space-around;
+    overflow: hidden;
+    flex-wrap: wrap;
+    transition: max-height 700ms;
+
+    &.expand {
+      max-height: 500px;
+    }
+  }
+
+  .navigation__main {
+    min-height: convertPixels(100,700,1vh);
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .navigation__logo {
@@ -78,8 +94,24 @@
   }
 
   .navigation__links {
-    //TODO
-    display: none;
+    display: block;
+    width: 100%;
+
+    li {
+      margin: 1.1rem 0;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+
+  .navigation__link {
+    margin: 0 convertREM(26);
   }
 
   .navigation__cart {
@@ -96,8 +128,7 @@
     font-size: 1.7rem;
   }
 }
-
-@include responsive("tablet",max){
+@include responsive("tablet",max) {
   .navigation--footer {
     width: 100%;
     height: convertPixels(90,700,1vh);

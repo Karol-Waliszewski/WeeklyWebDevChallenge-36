@@ -2021,10 +2021,22 @@
 @media only screen and (max-width: 1023px) {
   .navigation {
     position: static;
-    height: 14.28571vh;
+    max-height: 14.28571vh;
+    height: auto;
     background-color: #fff;
     transform: none;
-    justify-content: space-around; }
+    justify-content: space-around;
+    overflow: hidden;
+    flex-wrap: wrap;
+    transition: max-height 700ms; }
+    .navigation.expand {
+      max-height: 500px; }
+  .navigation__main {
+    min-height: 14.28571vh;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
   .navigation__logo span {
     display: block;
     font-size: 2rem;
@@ -2034,7 +2046,16 @@
   .navigation__logo img {
     display: none; }
   .navigation__links {
-    display: none; }
+    display: block;
+    width: 100%; }
+    .navigation__links li {
+      margin: 1.1rem 0; }
+      .navigation__links li:first-child {
+        margin-top: 0; }
+      .navigation__links li:last-child {
+        display: none; }
+  .navigation__link {
+    margin: 0 1.625rem; }
   .navigation__cart {
     display: block;
     background: none;
