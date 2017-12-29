@@ -2030,7 +2030,7 @@
     flex-wrap: wrap;
     transition: max-height 700ms; }
     .navigation.expand {
-      max-height: 500px; }
+      max-height: 300px; }
   .navigation__main {
     min-height: 14.28571vh;
     width: 80%;
