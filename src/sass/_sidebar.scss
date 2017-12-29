@@ -1,5 +1,6 @@
 .sidebar {
   @extend .col-md-4;
+  @extend .col-xs-12;
 }
 
 .sidebar__heading {
@@ -90,10 +91,58 @@
     }
   }
 }
+@include responsive('tablet-wide',max) {
+  .sidebar {
+    height: auto;
+    min-height: 30px;
+    position: relative;
+  }
 
-@include responsive('tablet-wide',max){
-  .sidebar{
+  .sidebar__line {
+    display: none;
+  }
+
+  .sidebar__categories {
+    position: relative;
+    z-index: 10;
+    top: 0;
     max-height: 30px;
+    height: auto;
     overflow: hidden;
+    transition: max-height 400ms;
+    width: 30%;
+
+    & > .sidebar__heading {
+      cursor: pointer;
+    }
+
+    &.expand {
+      width: 100%;
+      max-height: 450px;
+    }
+  }
+
+  .filter {
+    position: relative;
+    top: -30px;
+    max-height: 30px;
+    height: auto;
+    overflow: hidden;
+    transition: max-height  400ms;
+    width: 100%;
+  //  margin-left: auto;
+
+    & > .sidebar__heading {
+      text-align: right;
+      padding-right: 7px;
+      cursor: pointer;
+      float: right;
+    }
+
+    &.expand {
+      //width: 100%;
+      //margin-left: 0;
+      max-height: 850px;
+    }
   }
 }

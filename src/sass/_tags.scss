@@ -8,6 +8,7 @@
 .tags__item {
   display: inline-block;
   margin-bottom: convertREM(14);
+
   &:last-child {
     .tags__link {
       &::after {
@@ -20,14 +21,19 @@
 .tags__link {
   color: #444;
   font-size: convertREM(18);
-
   font-weight: 600;
   text-decoration: none;
 
   &::after {
     content: ",";
   }
+
   &:hover {
     color: #000000;
+  }
+}
+@include responsive('tablet-wide',max) {
+  .tags {
+    display: none;
   }
 }

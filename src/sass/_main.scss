@@ -15,3 +15,12 @@
   font-size: 1.2rem;
   font-weight: 600;
 }
+@include responsive('tablet-wide',max) {
+  .main {
+    padding-top: 1.5rem;
+  }
+
+  .main__header {
+    display: none;
+  }
+}

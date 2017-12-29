@@ -16,7 +16,7 @@ gulp.task('css', () => {
 });
 
 gulp.task('js', () => {
-  return gulp.src(config.source + 'scripts/*.js')
+  return gulp.src(config.source + 'js/*.js')
     .pipe(gulp.dest(config.destination + 'js'));
 });
 
@@ -47,10 +47,10 @@ gulp.task('browserSync', () => {
 
 gulp.task('watch', () => {
   gulp.watch(config.source + 'sass/*.scss', ['css']);
-  gulp.watch(config.source + 'scripts/*.js', ['js']);
+  gulp.watch(config.source + 'js/*.js', ['js']);
   gulp.watch(config.source + '*.html', ['html']);
 
-  gulp.watch(config.source + 'scripts/*.js').on('change', function() {
+  gulp.watch(config.source + 'js/*.js').on('change', function() {
     setTimeout(browserSync.reload, 500);
   });
   gulp.watch(config.source + '*.html').on('change', function() {
